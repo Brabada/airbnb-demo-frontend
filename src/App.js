@@ -3,19 +3,11 @@ import styled from "styled-components";
 import "normalize.css";
 import "flexboxgrid2";
 
-import logo from "./logo.svg";
-import search from "./search.svg";
-
-import homes from "./exploreHomes.svg";
-import experiences from "./exploreExperiences.svg";
-import restaurants from "./exploreRestaurants.svg";
-
 import experience1 from "./experiencePic1.svg";
 import experience2 from "./experiencePic2.svg";
 import experience3 from "./experiencePic3.svg";
 import experience4 from "./experiencePic4.svg";
 
-import righticon from "./iconright.svg";
 import star from "./star.svg";
 
 import home1 from "./home1.svg";
@@ -34,7 +26,10 @@ import city4 from "./destination4.svg";
 import city5 from "./destination5.svg";
 import city6 from "./destination6.svg";
 
+import Header from "./Header.js";
+import ExploreAirbnb from "./ExploreAirbnb.js";
 import Footer from "./Footer.js";
+import { CardHeader } from "./CardHeader.js";
 
 import NextPage from "./NextPage.js";
 
@@ -51,62 +46,7 @@ const Flex = styled.div`
   align-items: center;
 `;
 
-const Header = styled.header`
-  padding-top: 16px;
-  padding-bottom: 16px;
-  box-sizing: border-box;
-  width: 100%;
-  box-shadow: 0 0.5px rgba(72, 72, 72, 0.3);
-  margin-bottom: 48px;
-`;
-const Logo = styled.img`height: 31px;`;
-const Search = styled.input`
-  width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 53px;
-  font-size: 16px;
-  border: 1px solid rgba(72, 72, 72, 0.2);
-  border-radius: 4px;
-  box-shadow: 1px 2px 4px rgba(196, 196, 196, 1);
-  background-image: url(${search});
-  background-repeat: no-repeat;
-  background-position: 12px center;
-  background-size: 20px 20px;
-`;
-
-const Button = styled.button`
-  border: none;
-  background-color: inherit;
-  font-size: 14px;
-  padding-right: ${props => (props.lastbutton ? "0" : "16px")};
-`;
-
 const Main = styled.main``;
-
-const ExploreAirbnb = styled.section`margin-bottom: 48px;`;
-const ExploreCard = styled.div`
-  border: 1px solid rgba(72, 72, 72, 0.2);
-  border-radius: 4px;
-  box-sizing: border-box;
-`;
-const ExploreImg = styled.img`
-  width: 96px;
-  height: 100%;
-  margin-right: 24px;
-  vertical-align: bottom;
-`;
-const ExploreText = styled.div`
-  display: inline-block;
-  padding-bottom: 27px;
-  font-weight: bold;
-`;
-
-const SeeAll = styled.a`
-  font-size: 14px;
-  color: rgba(56, 56, 56, 1);
-`;
-const RightIcon = styled.img``;
 
 const Experiences = styled.section`
   margin-bottom: 45px;
@@ -217,70 +157,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header>
-          <div className="container ">
-            <div className="row middle-lg">
-              <div className="col-lg-1">
-                <a href="">
-                  <Logo alt="Logo" src={logo} />
-                </a>
-              </div>
-              <div className="col-lg-5">
-                <Search placeholder="Try “Miami”" />
-              </div>
-              <div className="col-lg-2" />
-              <div className="col-lg-4">
-                <Button>Become a host</Button>
-                <Button>Help</Button>
-                <Button>Sign Up</Button>
-                <Button lastbutton>Log In</Button>
-              </div>
-            </div>
-          </div>
-        </Header>
-
+        <Header />
         <Main>
           <div className="container">
-            <ExploreAirbnb>
-              <h1>Explore Airbnb</h1>
-
-              <div className="row">
-                <div className="col-lg-4">
-                  <a href="">
-                    <ExploreCard>
-                      <ExploreImg alt="Homes" src={homes} />
-                      <ExploreText>Homes</ExploreText>
-                    </ExploreCard>
-                  </a>
-                </div>
-
-                <div className="col-lg-4">
-                  <a href="">
-                    <ExploreCard>
-                      <ExploreImg alt="Experiences" src={experiences} />
-                      <ExploreText>Experiences</ExploreText>
-                    </ExploreCard>
-                  </a>
-                </div>
-
-                <div className="col-lg-4">
-                  <a href="">
-                    <ExploreCard>
-                      <ExploreImg alt="Restaurants" src={restaurants} />
-                      <ExploreText>Restaurants</ExploreText>
-                    </ExploreCard>
-                  </a>
-                </div>
-              </div>
-            </ExploreAirbnb>
+            <ExploreAirbnb />
 
             <Experiences>
-              <Flex nowrap>
-                <h2>Experiences</h2>
-                <SeeAll>
-                  See all <RightIcon src={righticon} alt="Right Icon" />
-                </SeeAll>
-              </Flex>
+              <CardHeader Title="Experiences" SeeAll="on" />
               <div className="row">
                 <div className="col-lg-3">
                   <a href="">
@@ -378,12 +261,7 @@ class App extends Component {
             </Experiences>
 
             <Homes>
-              <Flex nowrap>
-                <h2>Homes</h2>
-                <SeeAll>
-                  See all <RightIcon src={righticon} alt="Right Icon" />
-                </SeeAll>
-              </Flex>
+              <CardHeader Title="Homes" SeeAll="true" />
               <div className="row">
                 <div className="col-lg-4">
                   <a href="">
@@ -480,12 +358,11 @@ class App extends Component {
             </Homes>
 
             <PopularReserve>
-              <Flex nowrap>
-                <h2>Popular reservations around the world</h2>
-                <SeeAll>
-                  See all <RightIcon src={righticon} alt="Right Icon" />
-                </SeeAll>
-              </Flex>
+              <CardHeader
+                Title="Popular reservations around the world"
+                SeeAll="on"
+              />
+
               <div className="row">
                 <div className="col-lg-3">
                   <a href="">
@@ -542,7 +419,8 @@ class App extends Component {
             </PopularReserve>
 
             <FeaturedDestination>
-              <h2>Featured destinations</h2>
+              <CardHeader Title="Featured destinations" />
+
               <div className="row">
                 <div className="col-lg-2">
                   <a href="">
