@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Circular-Book";
+  src: url("Circular_Air-Book.woff") format("woff"),
+    url("Circular_Air-Book.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Circular-Light";
+  src: url("Circular_Air-Light.woff") format("woff"),
+    url("Circular_Air-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Circular-Bold";
+  src: url("Circular_Air-Bold.woff") format("woff"),
+    url("Circular_Air-Bold.ttf") format("truetype");
+}
