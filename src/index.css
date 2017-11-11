@@ -13,9 +13,17 @@ a {
 h1,
 h2,
 h3 {
-  font-size: 32px;
+  font-size: 24px;
   font-style: bold;
   font-family: "Circular-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 32px;
+  }
 }
 
 h3 {
