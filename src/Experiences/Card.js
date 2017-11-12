@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "normalize.css";
-import "flexboxgrid2";
 
 //components
 import Star from "../Star";
@@ -34,7 +32,7 @@ export function Card(props) {
   return (
     <div className="col-xs-6 col-md-4 col-lg-3">
       <ExperienceCard>
-        <Img src={props.url} />
+        <Img src={props.img} />
         <Title>
           <Price>${props.price}</Price>
           <Name>{props.name}</Name>

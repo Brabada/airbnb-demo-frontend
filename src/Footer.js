@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import "normalize.css";
-import "flexboxgrid2";
 import "./index.css";
+import "./flexgrid.css";
 
 //sources
 import arrowdown from "./Footer/arrow-down.svg";
@@ -12,7 +11,7 @@ import twitter from "./Footer/twitter.svg";
 import instagram from "./Footer/instagram.svg";
 
 //styled-components
-const Footer = styled.footer`box-shadow: 0 -0.5px rgba(72, 72, 72, 0.3);`;
+const Footer = styled.footer`box-shadow: 0 -1px rgba(72, 72, 72, 0.3);`;
 
 const About = styled.section`
   padding-top: 48px;
@@ -23,7 +22,7 @@ const Select = styled.select`
 padding: 12px; 0px; 12px 8px;
 font-size: 12px;
   display: inline-block;
-  width: 50%;
+  width: 100%;
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
   background-image: url(${arrowdown});
@@ -35,7 +34,6 @@ font-size: 12px;
   -moz-appearance: none;
   /*for chrome*/
   -webkit-appearance: none;
-  
   {SiteLang}::-ms-expand {
     display: none;
   }
@@ -59,9 +57,11 @@ const Option = styled.option`
   font-size: 12px;
   font-weight: 300;
   color: rgba(56, 56, 56, 1);
+
   @media (min-width: 768px) {
     font-size: 15px;
   }
+
   @media (min-width: 991px) {
     font-size: 18px;
   }
@@ -74,8 +74,10 @@ const SiteCurrency = styled(Select)``;
 const H3 = styled.h3`
   margin-top: 0;
   margin-bottom: 19px;
+
   font-size: 12px;
   font-weight: bold;
+
   @media (min-width: 991px) {
     font-size: 15px;
     margin-bottom: 16px;
@@ -87,6 +89,7 @@ const Link = styled.a`
   margin-bottom: ${props => (props.block ? "8px" : "0")};
   font-size: 12px;
   color: rgba(56, 56, 56, 1);
+
   @media (min-width: 991px) {
     font-size: 15px;
   }
@@ -101,6 +104,7 @@ const Info = styled.section`
     padding-top: 32px;
     padding-bottom: 44px;
   }
+
   @media (min-width: 991px) {
     padding-bottom: 35px;
   }
@@ -108,6 +112,7 @@ const Info = styled.section`
 
 const Trademark = styled.div`
   display: block;
+  margin-bottom: 10px;
 
   @media (min-width: 768px) {
     display: inline-block;
@@ -124,38 +129,46 @@ const Logo = styled.img`
 
 const Copyright = styled.span`
   font-size: 12px;
+  color: rgba(56, 56, 56, 1);
 
-  margin-bottom: 11px;
   @media (min-width: 768px) {
     margin-right: 0;
   }
-  color: rgba(56, 56, 56, 1);
+
   @media (min-width: 991px) {
     font-size: 15px;
   }
 `;
-// Please, God, forgive me for this naming. its 10 am...
+
+// Please, God, forgive me for this naming. its 10 am...I know when that hotline bling
+
 const Addition = styled.div`
   display: block;
-  margin-left: 3%;
+  padding-left: 2%;
+
   @media (min-width: 768px) {
     display: inline-block;
     font-size: 12px;
-    padding-left: 40%;
   }
+
   @media (min-width: 991px) {
-    padding-left: 480px;
     font-size: 15px;
   }
 `;
-const Terms = styled(Link)`margin-right: 16px;`;
+
+const Terms = styled(Link)`
+  padding-left: 5px;
+  padding-bottom: 8px;
+`;
 
 const SocialMedia = styled.div`display: inline-block;`;
 
 const SocialLink = styled(Link)`margin-right: 12px;`;
+
 const Social = styled.img`
   width: 16px;
   height: 16px;
+
   @media (min-width: 768px) {
     width: 24px;
     height: 24px;
@@ -170,19 +183,24 @@ export default function() {
         <About>
           <div className="row">
             <div className="col-xs-12 col-md-3">
-              <SiteLang>
-                <Option value="English">English</Option>
-              </SiteLang>
-              <SiteCurrency>
-                <Option value="United States Dollar">
-                  United States Dollar
-                </Option>
-              </SiteCurrency>
+              <div className="row">
+                <div className="col-xs-6 col-md-12">
+                  <SiteLang>
+                    <Option value="English">English</Option>
+                  </SiteLang>
+                </div>
+
+                <div className="col-xs-6 col-md-12">
+                  <SiteCurrency>
+                    <Option value="United States Dollar">
+                      United States Dollar
+                    </Option>
+                  </SiteCurrency>
+                </div>
+              </div>
             </div>
 
-            <div className="hidden-xs hidden-sm col-md-1" />
-
-            <div className="hidden-xs hidden-sm col-md-2">
+            <div className="hidden-xs hidden-sm col-xs-offset-0 col-md-offset-1 col-md-2">
               <H3>Airbnb</H3>
               <Link block href="">
                 About us
@@ -204,9 +222,7 @@ export default function() {
               </Link>
             </div>
 
-            <div className="hidden-xs hidden-sm col-md-1" />
-
-            <div className="hidden-xs hidden-sm col-md-2">
+            <div className="hidden-xs hidden-sm col-xs-offset-0 col-md-offset-1 col-md-2">
               <H3>Discover</H3>
               <Link block href="">
                 Trust & Safety
@@ -231,9 +247,7 @@ export default function() {
               </Link>
             </div>
 
-            <div className="hidden-xs hidden-sm col-md-1" />
-
-            <div className="hidden-xs hidden-sm col-md-2">
+            <div className="hidden-xs hidden-sm col-xs-offset-0 col-md-offset-1 col-md-2">
               <H3>Hosting</H3>
               <Link block href="">
                 Why Host
@@ -250,28 +264,42 @@ export default function() {
             </div>
           </div>
         </About>
+
         <Info>
           <div className="row between-xs middle-xs">
-            <Trademark>
-              <Logo src={logo} />
-              <Copyright>© Airbnb Inc.</Copyright>
-            </Trademark>
-            <Addition>
-              <Terms href="">Terms</Terms>
-              <Terms href="">Privacy</Terms>
-              <Terms href="">Site map</Terms>
-            </Addition>
-            <SocialMedia>
-              <SocialLink>
-                <Social src={facebook} />
-              </SocialLink>
-              <SocialLink>
-                <Social src={twitter} />
-              </SocialLink>
-              <SocialLink>
-                <Social src={instagram} />
-              </SocialLink>
-            </SocialMedia>
+            <div className="col-xs-12 col-md-7">
+              <div className="row middle-xs" />
+              <Trademark>
+                <Logo src={logo} />
+                <Copyright>© Airbnb Inc.</Copyright>
+              </Trademark>
+            </div>
+
+            <div className="col-xs-12 col-md-5">
+              <div className="row start-xs end-md middle-xs">
+                <div className="col-xs-6">
+                  <Addition>
+                    <Terms href="">Terms</Terms>
+                    <Terms href="">Privacy</Terms>
+                    <Terms href="">Site map</Terms>
+                  </Addition>
+                </div>
+
+                <div className="col-xs-6">
+                  <SocialMedia>
+                    <SocialLink>
+                      <Social src={facebook} />
+                    </SocialLink>
+                    <SocialLink>
+                      <Social src={twitter} />
+                    </SocialLink>
+                    <SocialLink>
+                      <Social src={instagram} />
+                    </SocialLink>
+                  </SocialMedia>
+                </div>
+              </div>
+            </div>
           </div>
         </Info>
       </div>

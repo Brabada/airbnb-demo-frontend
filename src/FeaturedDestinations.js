@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import "normalize.css";
 import "./flexgrid.css";
-// import "flexboxgrid2";
 
 //sources
 import city1 from "./FeaturedDestinations/destination1.svg";
@@ -15,9 +13,13 @@ import city6 from "./FeaturedDestinations/destination6.svg";
 //components
 import { Card } from "./FeaturedDestinations/Card";
 import { CardWrapper } from "./CardWrapper";
+import NextPage from "./NextPage";
 
 //styled-components
-const FeaturedDestinations = styled.section`margin-bottom: 64px;`;
+const FeaturedDestinations = styled.section`
+  position: relative;
+  margin-bottom: 64px;
+`;
 
 // Featured destinations card row
 export default function() {
@@ -26,14 +28,15 @@ export default function() {
       <h2>Featured destinations</h2>
       <CardWrapper>
         <div className="row-nowrap">
-          <Card url={city1} name="Paris" />
-          <Card url={city2} name="Miami" />
-          <Card url={city3} name="Tokyo" />
-          <Card url={city4} name="Cape town" />
-          <Card url={city5} name="Seoul" />
-          <Card url={city6} name="Los Angeles" />
+          <Card img={city1} name="Paris" />
+          <Card img={city2} name="Miami" />
+          <Card img={city3} name="Tokyo" />
+          <Card img={city4} name="Cape town" />
+          <Card img={city5} name="Seoul" />
+          <Card img={city6} name="Los Angeles" />
         </div>
       </CardWrapper>
+      <NextPage />
     </FeaturedDestinations>
   );
 }

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "normalize.css";
-// import "flexboxgrid2";
 import "./flexgrid.css";
 
 //sources
@@ -9,11 +7,25 @@ import righticon from "./CardHeader/iconright.svg";
 
 // styled-components
 const SeeAll = styled.a`
-color: rgba(56, 56, 56, 1);
-font-size: 12px;
-  @media (min-width: 768px) {font-size: 14px;}
-   /* visibility: ${props =>
-     props.on ? "collapse" : "visible"}; /*not working*/ 
+  color: rgba(56, 56, 56, 1);
+  font-size: 10px;
+
+  @media (min-width: 380px) {
+    padding-left: 20%;
+  }
+
+  @media (min-width: 453px) {
+    padding-left: 35%;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    padding-left: 40%;
+  }
+
+  @media (min-width: 995px) {
+    padding-left: 60%;
+  }
 `;
 
 const RightIcon = styled.img`
@@ -25,10 +37,10 @@ const RightIcon = styled.img`
 export function CardHeader(props) {
   return (
     <div className="row-nowrap middle-xs between-xs">
-      <div className="col-xs-10 col-sm-11 col-md-11">
+      <div className="col-xs-10 col-md-10">
         <h2>{props.title}</h2>
       </div>
-      <div className="col-xs-3 col-sm-2 col-md-2">
+      <div className="col-xs-2  col-md-2">
         <SeeAll>
           See all <RightIcon src={righticon} alt="Right Icon" />
         </SeeAll>

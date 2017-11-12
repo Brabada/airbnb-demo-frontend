@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import "normalize.css";
 import "./flexgrid.css";
-// import "flexboxgrid2";
 
 //sources
 import homes from "./ExploreAirbnb/Homes.svg";
@@ -23,9 +21,9 @@ export default function() {
       <h1>Explore Airbnb</h1>
       <CardWrapper>
         <div className="row-nowrap">
-          <Card type="Homes" url={homes} />
-          <Card type="Experiences" url={experiences} />
-          <Card type="Restaurants" url={restaurants} />
+          <Card type="Homes" img={homes} />
+          <Card type="Experiences" img={experiences} />
+          <Card type="Restaurants" img={restaurants} />
         </div>
       </CardWrapper>
     </ExploreAirbnb>

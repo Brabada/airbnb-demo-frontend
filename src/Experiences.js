@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import "normalize.css";
 import "./flexgrid.css";
-// import "flexboxgrid2";
 
 //components
 import NextPage from "./NextPage";
@@ -30,28 +28,28 @@ export default function() {
       <CardWrapper>
         <div className="row-nowrap">
           <Card
-            url={experience1}
+            img={experience1}
             price="29"
             name="Forest therapy"
             reviewNum="44"
           />
 
           <Card
-            url={experience2}
+            img={experience2}
             price="69"
             name="Whale Watching"
             reviewNum="46"
           />
 
           <Card
-            url={experience3}
+            img={experience3}
             price="69"
             name="Table Mountain Summit, Cable Car Down"
             reviewNum="44"
           />
 
           <Card
-            url={experience4}
+            img={experience4}
             price="50"
             name="Salsa Night"
             reviewNum="44"

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "normalize.css";
-import "flexboxgrid2";
 
 //styled-components
 const CardBody = styled.div`
@@ -13,6 +11,7 @@ const Img = styled.img`
   width: 100%;
   height: 100%;
   vertical-align: bottom;
+
   @media (min-width: 768px) {
     width: 96px;
     height: 72px;
@@ -20,13 +19,16 @@ const Img = styled.img`
     vertical-align: bottom;
   }
 `;
+
 const Text = styled.div`
   display: block;
   font-weight: bold;
   font-size: 12px;
+
   padding-left: 12px;
   padding-bottom: 15px;
   padding-top: 15px;
+
   @media (min-width: 768px) {
     font-size: 17px;
     display: inline-block;
@@ -39,7 +41,7 @@ export function Card(props) {
     <div className="col-xs-6 col-md-5 col-lg-4">
       <a href="">
         <CardBody>
-          <Img alt={props.type} src={props.url} />
+          <Img alt={props.type} src={props.img} />
           <Text>{props.type}</Text>
         </CardBody>
       </a>

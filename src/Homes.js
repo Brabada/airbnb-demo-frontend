@@ -13,10 +13,17 @@ import home3 from "./Homes/home3.svg";
 import { CardHeader } from "./CardHeader";
 import { Card } from "./Homes/Card";
 import { CardWrapper } from "./CardWrapper";
+import NextPage from "./NextPage";
 
 //styled-components
-const Homes = styled.section`margin-bottom: 48px;`;
-const Wrapper = styled.div`position: relative;`;
+const Homes = styled.section`
+  position: relative;
+  margin-bottom: 48px;
+`;
+const Wrapper = styled.div`
+  position: relative;
+  padding-bottom: 1px;
+`;
 
 // Home's card row
 export default function() {
@@ -27,7 +34,7 @@ export default function() {
         <Wrapper>
           <div className="row-nowrap">
             <Card
-              url={home1}
+              img={home1}
               price="82"
               name="La Salentina, see, nature & relax"
               rentType="Entire house"
@@ -37,7 +44,7 @@ export default function() {
             />
 
             <Card
-              url={home2}
+              img={home2}
               price="82"
               name="Your private 3 bedrooms riad and exclusive"
               rentType="Entire house"
@@ -47,7 +54,7 @@ export default function() {
             />
 
             <Card
-              url={home3}
+              img={home3}
               price="200"
               name="Dreamy Tropical Tree House"
               rentType="Entire treehouse"
@@ -59,6 +66,7 @@ export default function() {
           {/* <NextPage /> //dont work properly */}
         </Wrapper>
       </CardWrapper>
+      <NextPage />
     </Homes>
   );
 }
