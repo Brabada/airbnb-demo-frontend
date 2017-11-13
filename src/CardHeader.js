@@ -9,22 +9,10 @@ import righticon from "./CardHeader/iconright.svg";
 const SeeAll = styled.a`
   color: rgba(56, 56, 56, 1);
   font-size: 10px;
-
-  @media (min-width: 380px) {
-    padding-left: 20%;
-  }
-
-  @media (min-width: 453px) {
-    padding-left: 35%;
-  }
+  padding-right: 8px;
 
   @media (min-width: 768px) {
     font-size: 14px;
-    padding-left: 40%;
-  }
-
-  @media (min-width: 995px) {
-    padding-left: 60%;
   }
 `;
 
@@ -36,14 +24,16 @@ const RightIcon = styled.img`
 //Create h2 header w/ See all button
 export function CardHeader(props) {
   return (
-    <div className="row-nowrap middle-xs between-xs">
+    <div className="row-nowrap middle-xs between-xs ">
       <div className="col-xs-10 col-md-10">
         <h2>{props.title}</h2>
       </div>
       <div className="col-xs-2  col-md-2">
-        <SeeAll>
-          See all <RightIcon src={righticon} alt="Right Icon" />
-        </SeeAll>
+        <div className="row end-xs">
+          <SeeAll>
+            See all <RightIcon src={righticon} alt="Right Icon" />
+          </SeeAll>
+        </div>
       </div>
     </div>
   );

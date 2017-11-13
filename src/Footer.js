@@ -19,8 +19,8 @@ const About = styled.section`
 `;
 
 const Select = styled.select`
-padding: 12px; 0px; 12px 8px;
-font-size: 12px;
+  padding: 12px 0px 12px 8px;
+  font-size: 12px;
   display: inline-block;
   width: 100%;
   border: 1px solid rgba(72, 72, 72, 0.2);
@@ -29,12 +29,9 @@ font-size: 12px;
   background-repeat: no-repeat;
   background-size: 11px 6px;
   background-position: 95% center;
+  appearance: none;
 
-  /*for firefox*/
-  -moz-appearance: none;
-  /*for chrome*/
-  -webkit-appearance: none;
-  {SiteLang}::-ms-expand {
+  {SiteLang}::expand {
     display: none;
   }
 
