@@ -31,22 +31,22 @@ const Select = styled.select`
   background-position: 95% center;
   appearance: none;
 
-  {SiteLang}::expand {
+  &::-ms-expand {
     display: none;
   }
 
-  @media (min-width:768px) {
-    display:block;
+  @media (min-width: 768px) {
+    display: block;
     font-size: 15px;
     width: 100%;
     margin-bottom: 16px;
     background-size: 15px 8px;
     padding: 13px 0px 15px 8px;
   }
-  
+
   @media (min-width: 991px) {
-  font-size: 18px;
-  padding: 12px 0px 13px 16px;
+    font-size: 18px;
+    padding: 12px 0px 13px 16px;
   }
 `;
 
