@@ -1,22 +1,37 @@
 import React, { Component } from "react";
-import Header from "./Header";
-import Content from "./Content";
-import logo from "./logo.svg";
+import styled from "styled-components";
 import "./App.css";
+import "./index.css";
+import "./fonts.css";
 
+//components
+import Header from "./Header";
+import ExploreAirbnb from "./ExploreAirbnb";
+import Experiences from "./Experiences";
+import Homes from "./Homes";
+import PopularReserve from "./PopularReserve";
+import FeaturedDestinations from "./FeaturedDestinations";
+import Footer from "./Footer";
+
+//styled-components
+const Main = styled.main``;
+
+//app starting
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header />
-        <Content />
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
+        <Main>
+          <div className="container">
+            <ExploreAirbnb />
+            <Experiences />
+            <Homes />
+            <PopularReserve />
+            <FeaturedDestinations />
+          </div>
+        </Main>
+        <Footer />
       </div>
     );
   }
