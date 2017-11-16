@@ -66,6 +66,7 @@ export default function() {
           {/* <NextPage /> //dont work properly */}
         </Wrapper>
       </CardWrapper>
+
       <NextPage />
     </Homes>
   );

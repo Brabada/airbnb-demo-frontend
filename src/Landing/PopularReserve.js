@@ -29,33 +29,34 @@ export default function() {
         <div className="row-nowrap">
           <Card
             img={restaurant1}
-            type="Speakeasy"
+            type="SPEAKEASY"
             name="Chumley’s"
             check="60"
           />
 
           <Card
             img={restaurant2}
-            type="Korean gastropub"
+            type="KOREAN GASTROPUB"
             name="Hanjan"
             check="50"
           />
 
           <Card
             img={restaurant3}
-            type="German american"
+            type="GERMAN AMERICAN"
             name="Prime Meats"
             check="55"
           />
 
           <Card
             img={restaurant4}
-            type="Fine seafoo"
+            type="FINE SEAFOOD"
             name="Seaprice"
             check="70"
           />
         </div>
       </CardWrapper>
+
       <NextPage />
     </PopularReserve>
   );

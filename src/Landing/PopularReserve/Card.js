@@ -20,12 +20,13 @@ const Img = styled.img`
 `;
 
 const Type = styled.div`
+  font-family: "Circular Air", "Arial", sans-serif;
   font-size: 8px;
   font-weight: bold;
   margin-bottom: 2px;
 
   @media (min-width: 768px) {
-    font-size: 1.2em;
+    font-size: 10px;
   }
 `;
 
@@ -45,7 +46,7 @@ const AverageCheck = styled.div`
   color: rgba(56, 56, 56, 0.8);
 
   @media (min-width: 768px) {
-    font-size: 1.3em;
+    font-size: 18px;
   }
 `;
 

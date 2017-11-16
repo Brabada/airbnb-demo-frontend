@@ -86,7 +86,7 @@ export function Card(props) {
         </Title>
         <RentInfo>
           <Type>{props.rentType}</Type>
-          <Divider>·</Divider>
+          <Divider> · </Divider>
           <NumBed>{props.numBeds} beds</NumBed>
         </RentInfo>
         <div>
@@ -98,7 +98,7 @@ export function Card(props) {
             <Star />
           </CardRating>
           <CardRatingCounter>{props.rateNum}</CardRatingCounter>
-          <Divider>·</Divider>
+          <Divider> · </Divider>
           <HostType>{props.hostType}</HostType>
         </div>
       </HomeCard>

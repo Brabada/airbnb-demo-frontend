@@ -17,6 +17,7 @@ const Aside = styled.aside`
     top: 50%;
   }
 `;
+
 const NextPage = styled.button`
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 50%;

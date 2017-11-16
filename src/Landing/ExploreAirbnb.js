@@ -21,9 +21,9 @@ export default function() {
       <h1>Explore Airbnb</h1>
       <CardWrapper>
         <div className="row-nowrap">
-          <Card type="Homes" img={homes} />
-          <Card type="Experiences" img={experiences} />
-          <Card type="Restaurants" img={restaurants} />
+          <Card link="/homes" type="Homes" img={homes} />
+          <Card link="#" type="Experiences" img={experiences} />
+          <Card link="#" type="Restaurants" img={restaurants} />
         </div>
       </CardWrapper>
     </ExploreAirbnb>

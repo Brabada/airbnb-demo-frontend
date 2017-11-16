@@ -39,7 +39,7 @@ const Text = styled.div`
 export function Card(props) {
   return (
     <div className="col-xs-6 col-md-5 col-lg-4">
-      <a href="">
+      <a href={props.link}>
         <CardBody>
           <Img alt={props.type} src={props.img} />
           <Text>{props.type}</Text>

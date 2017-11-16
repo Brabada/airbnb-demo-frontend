@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "./index.css";
 import "./flexgrid.css";
 
 //sources
@@ -19,6 +18,7 @@ const About = styled.section`
 `;
 
 const Select = styled.select`
+  font-family: "Circular Air", "Arial", sans-serif;
   padding: 12px 0px 12px 8px;
   font-size: 12px;
   display: inline-block;
@@ -73,7 +73,9 @@ const H3 = styled.h3`
   margin-bottom: 19px;
 
   font-size: 12px;
+  font-family: "Circular Air", "Arial", sans-serif;
   font-weight: bold;
+  color: #383838;
 
   @media (min-width: 991px) {
     font-size: 15px;
@@ -82,10 +84,11 @@ const H3 = styled.h3`
 `;
 
 const Link = styled.a`
+  font-family: "Circular Air Book", "Arial", sans-serif;
   display: ${props => (props.block ? "block" : "inline-block")};
   margin-bottom: ${props => (props.block ? "8px" : "0")};
   font-size: 12px;
-  color: rgba(56, 56, 56, 1);
+  color: #636363;
 
   @media (min-width: 991px) {
     font-size: 15px;
@@ -126,7 +129,8 @@ const Logo = styled.img`
 
 const Copyright = styled.span`
   font-size: 12px;
-  color: rgba(56, 56, 56, 1);
+  color: #636363;
+  font-family: "Circular Air Book", "Arial", sans-serif;
 
   @media (min-width: 768px) {
     margin-right: 0;
@@ -156,6 +160,13 @@ const Addition = styled.div`
 const Terms = styled(Link)`
   padding-left: 5px;
   padding-bottom: 8px;
+  @media (min-width: 768px) {
+    margin-right: 1px;
+  }
+
+  @media (min-width: 991px) {
+    margin-right: 5px;
+  }
 `;
 
 const SocialMedia = styled.div`display: inline-block;`;

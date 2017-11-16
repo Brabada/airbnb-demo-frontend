@@ -6,16 +6,30 @@ import logo from "./Header/logo.svg";
 import search from "./Header/search.svg";
 import arrowMenu from "./Header/arrowMenu.svg";
 
+//components
+import Filter from "./Filter";
+
 //styled-component
+const Wrapper = styled.div``;
+
+const FixedContainer = styled.div`
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+`;
+
+const OffsetContainer = styled.div`height: 140px;`;
+
 const Header = styled.header`
+  background-color: #fff;
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-bottom: 48px;
-
   box-sizing: border-box;
-  box-shadow: 0 0.5px rgba(72, 72, 72, 0.3);
+  border-bottom: 1px solid rgba(72, 72, 72, 0.3);
 `;
+
+const Link = styled.a``;
 
 const Logo = styled.img`height: 31px;`;
 
@@ -51,6 +65,7 @@ const Search = styled.input`
   background-size: 20px 20px;
 
   font-size: 16px;
+  font-family: "Circular Air Book", "Arial", sans-serif;
 
   @media (min-width: 991px) {
     padding-left: 53px;
@@ -60,6 +75,7 @@ const Search = styled.input`
 
 const Button = styled.button`
   display: none;
+  font-family: "Circular Air", "Arial", sans-serif;
 
   @media (min-width: 991px) {
     display: inline-block;
@@ -70,29 +86,38 @@ const Button = styled.button`
   }
 `;
 
+//Homes Header
 export default function() {
   return (
-    <Header>
-      <div className="container">
-        <div className="row middle-xs start-xs">
-          <div className="col-xs-3 col-lg-1">
-            <a href="">
-              <Logo alt="Logo" src={logo} />
-              <ArrowMenu />
-            </a>
-          </div>
+    <Wrapper>
+      <FixedContainer>
+        <Header>
+          <div className="container">
+            <div className="row middle-xs start-xs">
+              <div className="col-xs-3 col-sm-2 col-md-1 col-lg-1">
+                <Link href="../">
+                  <Logo alt="Logo" src={logo} />
+                  <ArrowMenu />
+                </Link>
+              </div>
 
-          <div className="  col-xs-9 col-md-7 col-lg-5 ">
-            <Search placeholder="Try “Miami”" />
+              <div className="col-xs-9 col-md-7 col-lg-5 ">
+                <Search placeholder="Anywhere  ·  Homes" />
+              </div>
+
+              <div className="hidden-md col-md-offset-0 col-lg-offset-2 col-lg-4">
+                <Button>Become a host</Button>
+                <Button>Help</Button>
+                <Button>Sign Up</Button>
+                <Button lastbutton>Log In</Button>
+              </div>
+            </div>
           </div>
-          <div className="hidden-md col-md-offset-0 col-lg-offset-2 col-lg-4">
-            <Button>Become a host</Button>
-            <Button>Help</Button>
-            <Button>Sign Up</Button>
-            <Button lastbutton>Log In</Button>
-          </div>
-        </div>
-      </div>
-    </Header>
+        </Header>
+        <Filter />
+      </FixedContainer>
+
+      <OffsetContainer />
+    </Wrapper>
   );
 }
