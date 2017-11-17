@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "./flexgrid.css";
-
+// import { Link } from "react-router-dom";
 //sources
 import righticon from "./CardHeader/iconright.svg";
 
@@ -16,7 +16,8 @@ const Wrapper = styled.div`
   }
 `;
 
-const SeeAll = styled.a`
+const SeeAll = styled.div`
+  display: inline-block;
   color: rgba(56, 56, 56, 1);
   font-size: 10px;
   padding-right: 8px;
@@ -47,9 +48,11 @@ export function CardHeader(props) {
         </div>
         <div className="col-xs-2  col-md-2">
           <div className="row end-xs">
+            {/* <Link to={props.link}> */}
             <SeeAll>
               See all <RightIcon src={righticon} alt="Right Icon" />
             </SeeAll>
+            {/* </Link> */}
           </div>
         </div>
       </div>

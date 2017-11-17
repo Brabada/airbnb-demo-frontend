@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 export default function() {
   return (
     <Homes>
-      <CardHeader title="Homes" />
+      <CardHeader link="/homes" title="Homes" />
       <CardWrapper>
         <Wrapper>
           <div className="row-nowrap">

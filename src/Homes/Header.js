@@ -6,6 +6,8 @@ import logo from "./Header/logo.svg";
 import search from "./Header/search.svg";
 import arrowMenu from "./Header/arrowMenu.svg";
 
+import { Link } from "react-router-dom";
+
 //components
 import Filter from "./Filter";
 
@@ -29,7 +31,7 @@ const Header = styled.header`
   border-bottom: 1px solid rgba(72, 72, 72, 0.3);
 `;
 
-const Link = styled.a``;
+// const Link = styled.a``;
 
 const Logo = styled.img`height: 31px;`;
 
@@ -96,7 +98,7 @@ export default function() {
           <div className="container">
             <div className="row middle-xs start-xs">
               <div className="col-xs-3 col-sm-2 col-md-1 col-lg-1">
-                <Link href="../">
+                <Link to="../">
                   <Logo alt="Logo" src={logo} />
                   <ArrowMenu />
                 </Link>

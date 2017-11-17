@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 //styled-components
 const CardBody = styled.div`
@@ -44,12 +45,12 @@ const Text = styled.div`
 export function Card(props) {
   return (
     <div className="col-xs-6 col-md-5 col-lg-4">
-      <a href={props.link}>
+      <Link to={props.link}>
         <CardBody>
           <Img alt={props.type} src={props.img} />
           <Text>{props.type}</Text>
         </CardBody>
-      </a>
+      </Link>
     </div>
   );
 }
