@@ -15,7 +15,10 @@ const Img = styled.img`
     height: 346px;
   }
 `;
-const Title = styled.a`display: block;`;
+const Title = styled.a`
+  display: block;
+  margin-top: 3px;
+`;
 
 const Name = styled.a`
   font-size: 15px;

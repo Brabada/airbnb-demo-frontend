@@ -12,13 +12,21 @@ import { Card } from "./ExploreAirbnb/Card.js";
 import { CardWrapper } from "./CardWrapper";
 
 //styled-components
-const ExploreAirbnb = styled.section`margin-bottom: 48px;`;
+const ExploreAirbnb = styled.section`margin-bottom: 38px;`;
+const H1 = styled.h1`
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+`;
 
 // Explore Airbnb row
 export default function() {
   return (
     <ExploreAirbnb>
-      <h1>Explore Airbnb</h1>
+      <H1>Explore Airbnb</H1>
       <CardWrapper>
         <div className="row-nowrap">
           <Card link="/homes" type="Homes" img={homes} />

@@ -4,7 +4,7 @@ import "normalize.css";
 import "flexboxgrid2";
 
 // sources
-import arrow from "./NextPage/rightArrow.svg";
+import arrow from "../NextPage/rightArrow.svg";
 
 // Next page button for card row
 const Aside = styled.aside`
@@ -14,7 +14,7 @@ const Aside = styled.aside`
     display: block;
     position: absolute;
     right: -15px;
-    top: calc(50% - 20px);
+    top: calc(50% - 30px);
   }
 `;
 

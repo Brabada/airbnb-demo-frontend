@@ -13,19 +13,28 @@ import city6 from "./FeaturedDestinations/destination6.svg";
 //components
 import { Card } from "./FeaturedDestinations/Card";
 import { CardWrapper } from "./CardWrapper";
-import NextPage from "./NextPage";
+import NextPage from "./FeaturedDestinations/NextPage";
 
 //styled-components
 const FeaturedDestinations = styled.section`
   position: relative;
   margin-bottom: 64px;
 `;
+const H2 = styled.h2`
+  margin-top: 42;
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+    margin-top: 48px;
+  }
+`;
 
 // Featured destinations card row
 export default function() {
   return (
     <FeaturedDestinations>
-      <h2>Featured destinations</h2>
+      <H2>Featured destinations</H2>
       <CardWrapper>
         <div className="row-nowrap">
           <Card img={city1} name="Paris" />

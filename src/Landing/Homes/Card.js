@@ -13,6 +13,7 @@ const Title = styled.div`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  margin-top: 8px;
 `;
 
 const Img = styled.img`
@@ -32,6 +33,7 @@ const Img = styled.img`
 
 const Name = styled.a`
   font-size: 13px;
+  font-family: "Circular Air", "Arial", sans-serif;
   font-weight: bold;
   display: span;
 
@@ -40,7 +42,10 @@ const Name = styled.a`
   }
 `;
 
-const RentInfo = styled.div``;
+const RentInfo = styled.div`
+  margin-top: 2px;
+  font-family: "Circular Air", "Arial", sans-serif;
+`;
 
 const Type = styled.div`
   font-size: 13px;
@@ -54,7 +59,6 @@ const Type = styled.div`
 const NumBed = styled.div`
   font-size: 13px;
   display: inline-block;
-  font-weight: 300;
 
   @media (min-width: 768px) {
     font-size: 15px;

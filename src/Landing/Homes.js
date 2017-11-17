@@ -13,12 +13,12 @@ import home3 from "./Homes/home3.svg";
 import { CardHeader } from "./CardHeader";
 import { Card } from "./Homes/Card";
 import { CardWrapper } from "./CardWrapper";
-import NextPage from "./NextPage";
+import NextPage from "./Homes/NextPage";
 
 //styled-components
 const Homes = styled.section`
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 38px;
 `;
 const Wrapper = styled.div`
   position: relative;

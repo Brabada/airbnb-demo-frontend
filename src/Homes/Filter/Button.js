@@ -4,7 +4,7 @@ import styled from "styled-components";
 //Components
 
 //styled-components
-const FiltButton = styled.button`
+export const FiltButton = styled.button`
   font-size: 14px;
   color: #383838;
   font-family: "Circular Air Book", "Arial", sans-serif;

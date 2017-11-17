@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "./flexgrid.css";
 
 //components
-import NextPage from "./NextPage";
+import NextPage from "./Experiences/NextPage";
 import { CardHeader } from "./CardHeader";
 import { Card } from "./Experiences/Card";
 import { CardWrapper } from "./CardWrapper";
@@ -16,7 +16,7 @@ import experience4 from "./Experiences/experience4.svg";
 
 // styled-components
 const Experiences = styled.section`
-  margin-bottom: 45px;
+  margin-bottom: 38px;
   position: relative;
 `;
 

@@ -5,10 +5,11 @@ import styled from "styled-components";
 const RestaurantCard = styled.a`display: block;`;
 
 const Img = styled.img`
-  margin-bottom: 12px;
   width: 100%;
+  margin-bottom: 7px;
 
   @media (min-width: 768px) {
+    margin-bottom: 12px;
     width: 100%;
     height: 100%;
   }
@@ -31,19 +32,20 @@ const Type = styled.div`
 `;
 
 const Name = styled.a`
+  font-family: "Circular Air", "Arial", sans-serif;
   font-weight: bold;
   font-size: 14px;
-  margin-bottom: 4px;
 
   @media (min-width: 768px) {
-    font-size: 1.2em;
+    font-size: 18px;
   }
 `;
 
 const AverageCheck = styled.div`
   font-size: 14px;
-  font-weight: 300;
+  font-family: "Circular Air", "Arial", sans-serif;
   color: rgba(56, 56, 56, 0.8);
+  margin-top: 5px;
 
   @media (min-width: 768px) {
     font-size: 18px;

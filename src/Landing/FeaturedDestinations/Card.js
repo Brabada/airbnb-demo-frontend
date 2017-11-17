@@ -21,6 +21,7 @@ const Img = styled.img`
 
 const Name = styled.a`
   display: block;
+  font-family: "Circular Air", "Arial", sans-serif;
   font-weight: bold;
   font-size: 12px;
 

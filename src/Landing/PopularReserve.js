@@ -10,7 +10,7 @@ import restaurant4 from "./PopularReserve/restaurant4.svg";
 
 //components
 import { CardHeader } from "./CardHeader";
-import NextPage from "./NextPage";
+import NextPage from "./PopularReserve/NextPage";
 import { Card } from "./PopularReserve/Card";
 import { CardWrapper } from "./CardWrapper";
 

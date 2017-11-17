@@ -18,7 +18,7 @@ const FixedContainer = styled.div`
   z-index: 11;
 `;
 
-const OffsetContainer = styled.div`height: 140px;`;
+const OffsetContainer = styled.div`height: 133px;`;
 
 const Header = styled.header`
   background-color: #fff;
@@ -51,7 +51,7 @@ const ArrowMenu = styled.button`
 const Search = styled.input`
   width: calc(100% - 60px);
 
-  padding-left: 40px;
+  padding-left: 53px;
   padding-top: 12px;
   padding-bottom: 12px;
 
@@ -75,6 +75,7 @@ const Search = styled.input`
 
 const Button = styled.button`
   display: none;
+  color: #383838;
   font-family: "Circular Air", "Arial", sans-serif;
 
   @media (min-width: 991px) {
@@ -101,11 +102,11 @@ export default function() {
                 </Link>
               </div>
 
-              <div className="col-xs-9 col-md-7 col-lg-5 ">
+              <div className="col-xs-9 col-md-7 col-lg-4 ">
                 <Search placeholder="Anywhere  ·  Homes" />
               </div>
 
-              <div className="hidden-md col-md-offset-0 col-lg-offset-2 col-lg-4">
+              <div className="hidden-md col-md-offset-0 col-lg-offset-3 col-lg-4">
                 <Button>Become a host</Button>
                 <Button>Help</Button>
                 <Button>Sign Up</Button>

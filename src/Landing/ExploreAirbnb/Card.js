@@ -11,8 +11,10 @@ const Img = styled.img`
   width: 100%;
   height: 100%;
   vertical-align: bottom;
+  border-radius: 4px 4px 0 0;
 
   @media (min-width: 768px) {
+    border-radius: 4px 0 0 4px;
     width: 96px;
     height: 72px;
     margin-right: 24px;
@@ -22,6 +24,8 @@ const Img = styled.img`
 
 const Text = styled.div`
   display: block;
+
+  font-family: "Circular Air", "Arial", sans-serif;
   font-weight: bold;
   font-size: 12px;
 
@@ -30,6 +34,7 @@ const Text = styled.div`
   padding-top: 15px;
 
   @media (min-width: 768px) {
+    padding-left: 0px;
     font-size: 17px;
     display: inline-block;
     padding-bottom: 27px;

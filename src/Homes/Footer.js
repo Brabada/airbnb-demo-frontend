@@ -14,7 +14,7 @@ const Footer = styled.footer`
 
 const Warning = styled.h3`
   display: block;
-
+  margin: 0 0 25px 0;
   font-family: "Circular Air Book", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 300;

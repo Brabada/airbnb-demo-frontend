@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 //Components
 import { Button } from "./Filter/Button";
+import { Dates } from "./Filter/Date";
+import { Guests } from "./Filter/Guests";
 
 //styled-components
 const Filter = styled.div`
@@ -27,8 +29,8 @@ export default function() {
     <Filter>
       <div className="container">
         <FilterBar>
-          <Button title="Dates" />
-          <Button title="Guests" />
+          <Dates />
+          <Guests />
 
           <Visible>
             <Button title="Room type" />

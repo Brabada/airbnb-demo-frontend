@@ -18,7 +18,7 @@ const FixedContainer = styled.div`
 
 const OffsetContainer = styled.div`
   height: 80px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 `;
 
 const Header = styled.header`
@@ -53,10 +53,9 @@ const ArrowMenu = styled.button`
 const Search = styled.input`
   width: calc(100% - 60px);
 
-  font-family: "Circular Air", "Arial", sans-serif;
-  font-style: normal;
+  font-family: "Circular Air Book", "Arial", sans-serif;
 
-  padding-left: 40px;
+  padding-left: 53px;
   padding-top: 12px;
   padding-bottom: 12px;
 
@@ -66,7 +65,7 @@ const Search = styled.input`
 
   background-image: url(${search});
   background-repeat: no-repeat;
-  background-position: 12px center;
+  background-position: 16px center;
   background-size: 20px 20px;
 
   font-size: 16px;
@@ -79,9 +78,8 @@ const Search = styled.input`
 
 const Button = styled.button`
   display: none;
-
-  font-family: "Circular Air", "Arial", sans-serif;
-  font-style: normal;
+  color: #383838;
+  font-family: "Circular Air Book", "Arial", sans-serif;
 
   @media (min-width: 991px) {
     display: inline-block;
@@ -106,10 +104,10 @@ export default function() {
                 </Link>
               </div>
 
-              <div className="col-xs-9 col-md-7 col-lg-5">
+              <div className="col-xs-9 col-md-7 col-lg-4 ">
                 <Search placeholder="Try “Miami”" />
               </div>
-              <div className="hidden-md col-md-offset-0 col-lg-offset-2 col-lg-4">
+              <div className="hidden-md col-md-offset-0 col-lg-offset-3 col-lg-4">
                 <Button>Become a host</Button>
                 <Button>Help</Button>
                 <Button>Sign Up</Button>

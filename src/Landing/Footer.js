@@ -19,6 +19,7 @@ const About = styled.section`
 
 const Select = styled.select`
   font-family: "Circular Air", "Arial", sans-serif;
+  color: #383838;
   padding: 12px 0px 12px 8px;
   font-size: 12px;
   display: inline-block;
@@ -29,6 +30,7 @@ const Select = styled.select`
   background-repeat: no-repeat;
   background-size: 11px 6px;
   background-position: 95% center;
+  background-color: #fff;
   appearance: none;
 
   &::-ms-expand {
@@ -51,8 +53,8 @@ const Select = styled.select`
 `;
 
 const Option = styled.option`
+  font-family: "Circular Air", "Arial", sans-serif;
   font-size: 12px;
-  font-weight: 300;
   color: rgba(56, 56, 56, 1);
 
   @media (min-width: 768px) {
@@ -70,7 +72,7 @@ const SiteCurrency = styled(Select)``;
 
 const H3 = styled.h3`
   margin-top: 0;
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 
   font-size: 12px;
   font-family: "Circular Air", "Arial", sans-serif;
@@ -79,19 +81,20 @@ const H3 = styled.h3`
 
   @media (min-width: 991px) {
     font-size: 15px;
-    margin-bottom: 16px;
+    margin-bottom: 17px;
   }
 `;
 
 const Link = styled.a`
   font-family: "Circular Air Book", "Arial", sans-serif;
   display: ${props => (props.block ? "block" : "inline-block")};
-  margin-bottom: ${props => (props.block ? "8px" : "0")};
+  margin-bottom: ${props => (props.block ? "14px" : "0")};
   font-size: 12px;
   color: #636363;
 
   @media (min-width: 991px) {
     font-size: 15px;
+    margin-bottom: 11px;
   }
 `;
 
@@ -111,12 +114,13 @@ const Info = styled.section`
 `;
 
 const Trademark = styled.div`
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 
   @media (min-width: 768px) {
-    display: inline-block;
-    margin-right: 0px;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -124,10 +128,11 @@ const Logo = styled.img`
   width: 20px;
   height: 21px;
   margin-right: 12px;
-  margin-left: 12px;
+  margin-left: 0;
 `;
 
-const Copyright = styled.span`
+const Copyright = styled.div`
+  display: inline-block;
   font-size: 12px;
   color: #636363;
   font-family: "Circular Air Book", "Arial", sans-serif;
@@ -145,11 +150,12 @@ const Copyright = styled.span`
 
 const Addition = styled.div`
   display: block;
-  padding-left: 2%;
+  margin-left: 8px;
 
   @media (min-width: 768px) {
     display: inline-block;
     font-size: 12px;
+    margin-left: 0;
   }
 
   @media (min-width: 991px) {
@@ -158,20 +164,39 @@ const Addition = styled.div`
 `;
 
 const Terms = styled(Link)`
-  padding-left: 5px;
-  padding-bottom: 8px;
-  @media (min-width: 768px) {
-    margin-right: 1px;
+  margin-right: 12px;
+  padding-bottom: 5px;
+
+  &:nth-child(3) {
+    margin-right: 14px;
   }
 
-  @media (min-width: 991px) {
-    margin-right: 5px;
+  @media (min-width: 768px) {
+    margin-right: 16px;
+
+    &:nth-child(3) {
+      margin-right: 27px;
+    }
   }
 `;
 
 const SocialMedia = styled.div`display: inline-block;`;
 
-const SocialLink = styled(Link)`margin-right: 12px;`;
+const SocialLink = styled(Link)`
+  margin-right: 10px;
+
+  &:nth-child(3) {
+    margin-right: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-right: 12px;
+
+    &:nth-child(3) {
+      margin-right: 0px;
+    }
+  }
+`;
 
 const Social = styled.img`
   width: 16px;
@@ -274,38 +299,33 @@ export default function() {
         </About>
 
         <Info>
-          <div className="row between-xs middle-xs">
-            <div className="col-xs-12 col-md-7">
-              <div className="row middle-xs" />
+          <div className="row middle-md">
+            <div className="col-xs-12 col-md-2 col-lg-2">
               <Trademark>
                 <Logo src={logo} />
                 <Copyright>© Airbnb Inc.</Copyright>
               </Trademark>
             </div>
 
-            <div className="col-xs-12 col-md-5">
-              <div className="row start-xs end-md middle-xs">
-                <div className="col-xs-6">
-                  <Addition>
-                    <Terms href="">Terms</Terms>
-                    <Terms href="">Privacy</Terms>
-                    <Terms href="">Site map</Terms>
-                  </Addition>
-                </div>
+            <div className="col-xs-12 col-md-offset-5 col-md-5 col-lg-offset-6 col-lg-4">
+              <div className="row middle-xs end-md ">
+                <Addition>
+                  <Terms href="">Terms</Terms>
+                  <Terms href="">Privacy</Terms>
+                  <Terms href="">Site map</Terms>
+                </Addition>
 
-                <div className="col-xs-6">
-                  <SocialMedia>
-                    <SocialLink>
-                      <Social src={facebook} />
-                    </SocialLink>
-                    <SocialLink>
-                      <Social src={twitter} />
-                    </SocialLink>
-                    <SocialLink>
-                      <Social src={instagram} />
-                    </SocialLink>
-                  </SocialMedia>
-                </div>
+                <SocialMedia>
+                  <SocialLink>
+                    <Social src={facebook} />
+                  </SocialLink>
+                  <SocialLink>
+                    <Social src={twitter} />
+                  </SocialLink>
+                  <SocialLink>
+                    <Social src={instagram} />
+                  </SocialLink>
+                </SocialMedia>
               </div>
             </div>
           </div>
