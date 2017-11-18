@@ -15,7 +15,7 @@ import home6 from "./Card/home6.svg";
 import Footer from "./Footer";
 import { Card } from "./Card/Card";
 import { PageBar } from "./PageBar";
-import Map from "./Map";
+import GoogleMap from "./Map";
 
 //styled-components
 const Homes = styled.section`margin-top: 24px;`;
@@ -95,7 +95,7 @@ export default function() {
             <Footer />
           </div>
           <div className="hidden-xs hidden-sm hidden-md col-lg-4">
-            <Map />
+            <GoogleMap />
           </div>
         </div>
       </Wrapper>

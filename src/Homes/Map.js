@@ -17,7 +17,7 @@ export default function() {
     <Wrapper>
       <GoogleMap
         bootstrapURLKeys={{
-          key: "AIzaSyACRHL2flxhPcLLxFn20JKLvBHT-Tp0OaI",
+          key: process.env.REACT_APP_MAP_KEY,
           language: "en"
         }}
         defaultZoom={8}

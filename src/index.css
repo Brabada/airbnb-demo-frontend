@@ -40,6 +40,7 @@ h3 {
   font-family: "Circular Air", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: bold;
+  color: #383838;
 }
 
 @media (min-width: 768px) {

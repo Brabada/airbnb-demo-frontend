@@ -10,7 +10,7 @@ import twitter from "./Footer/twitter.svg";
 import instagram from "./Footer/instagram.svg";
 
 //styled-components
-const Footer = styled.footer`box-shadow: 0 -1px rgba(72, 72, 72, 0.3);`;
+const Footer = styled.footer`box-shadow: 0 -0.5px rgba(72, 72, 72, 0.3);`;
 
 const About = styled.section`
   padding-top: 48px;
@@ -101,7 +101,7 @@ const Link = styled.a`
 const Info = styled.section`
   padding-top: 16px;
   padding-bottom: 16px;
-  border-top: 1px solid rgba(72, 72, 72, 0.2);
+  border-top: 1px solid rgba(72, 72, 72, 0.1);
 
   @media (min-width: 768px) {
     padding-top: 32px;

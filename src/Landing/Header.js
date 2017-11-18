@@ -28,7 +28,7 @@ const Header = styled.header`
   padding-bottom: 16px;
 
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(72, 72, 72, 0.3);
+  border-bottom: 0.5px solid rgba(72, 72, 72, 0.3);
 `;
 
 const Logo = styled.img`height: 31px;`;
@@ -59,9 +59,9 @@ const Search = styled.input`
   padding-top: 12px;
   padding-bottom: 12px;
 
-  border: 1px solid rgba(72, 72, 72, 0.2);
+  border: 0.5px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
-  box-shadow: 1px 2px 4px rgba(196, 196, 196, 1);
+  box-shadow: 1px 1px 4px rgba(72, 72, 72, 0.08);
 
   background-image: url(${search});
   background-repeat: no-repeat;

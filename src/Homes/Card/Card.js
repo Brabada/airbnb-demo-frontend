@@ -16,7 +16,7 @@ const Title = styled.div`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-top: 8px;
+  margin-top: 5px;
 `;
 
 const Img = styled.img`
@@ -46,8 +46,9 @@ const Name = styled.a`
 `;
 
 const RentInfo = styled.div`
-  margin-top: 2px;
+  margin-top: 6px;
   font-family: "Circular Air", "Arial", sans-serif;
+  font-size: 15px;
 `;
 
 const Type = styled.div`
@@ -72,13 +73,18 @@ const CardRatingCounter = styled.div`
   margin-top: 7px;
   display: inline-block;
   font-size: 12px;
+  font-family: "Circular Air Book", "Arial", sans-serif;
 `;
 
-const Divider = styled.span``;
+const Divider = styled.span`
+  font-size: 12px;
+  font-family: "Circular Air Book", "Arial", sans-serif;
+`;
 
 const HostType = styled.div`
   display: inline-block;
   font-size: 12px;
+  font-family: "Circular Air Book", "Arial", sans-serif;
 `;
 
 // Generating single Card for Homes Section

@@ -17,7 +17,7 @@ const Img = styled.img`
 `;
 const Title = styled.a`
   display: block;
-  margin-top: 3px;
+  margin-top: 0;
 `;
 
 const Name = styled.a`
