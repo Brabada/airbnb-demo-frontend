@@ -71,6 +71,7 @@ const SmallCalendar = styled.div`
   background-color: #fff;
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
+  
   }
 `;
 
@@ -103,8 +104,13 @@ const ActionBar = styled(Actions)`margin: 16px 8px 40px 8px;`;
 const DateInputContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: start;
   margin-top: 8px;
   margin-bottom: 8px;
+`;
+const DayControllerWrapper = styled.div`
+  height: calc(100% - 120px);
+  width: 100%;
 `;
 
 const CheckIn = styled.span`
@@ -133,8 +139,6 @@ const RightArrow = styled.img`
   height: 10px;
   margin-right: 8px;
 `;
-
-const ImgWrapper = styled.div`display: inline-block;`;
 
 const Cancel = styled.button`
   background-color: inherit;
@@ -220,17 +224,19 @@ export class Dates extends React.Component {
                   <Reset>Reset</Reset>
                 </ActionBar>
                 <DateInputContainer>
-                  {/* <DateRangePicker /> */}
                   <CheckIn>Check-in</CheckIn>
                   <RightArrow src={rightarrow} />
                   <CheckOut>Check-out</CheckOut>
                 </DateInputContainer>
-                <DayPickerRangeController
-                  isDayBlocked={day => day.isBefore(moment(), "day")}
-                  hideKeyboardShortcutsPanel
-                  orientation="verticalScrollable"
-                  numberOfMonths={3}
-                />
+                <DayControllerWrapper>
+                  <DayPickerRangeController
+                    isDayBlocked={day => day.isBefore(moment(), "day")}
+                    hideKeyboardShortcutsPanel
+                    orientation="verticalScrollable"
+                    numberOfMonths={4}
+                    DayPickerNavigation
+                  />
+                </DayControllerWrapper>
               </SmallCalendar>
             </MediaQuery>
           </CalendarWrapper>

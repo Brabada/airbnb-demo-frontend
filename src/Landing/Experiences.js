@@ -24,7 +24,7 @@ const Experiences = styled.section`
 export default function() {
   return (
     <Experiences>
-      <CardHeader title="Experiences" />
+      <CardHeader title="Experiences" link="#" />
       <CardWrapper>
         <div className="row-nowrap">
           <Card

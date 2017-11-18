@@ -24,7 +24,7 @@ const PopularReserve = styled.section`
 export default function() {
   return (
     <PopularReserve>
-      <CardHeader title="Popular reservations around the world" />
+      <CardHeader link="#" title="Popular reservations around the world" />
       <CardWrapper>
         <div className="row-nowrap">
           <Card
