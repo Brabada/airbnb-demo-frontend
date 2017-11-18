@@ -50,17 +50,18 @@ const Button = styled(FiltButton)`
 `;
 
 const CalendarWrapper = styled.div`
-  @media (max-width: 767px) {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   @media (min-width: 768px) {
     position: absolute;
     top: 133px;
+    bottom: auto;
+    left: auto;
+    right: auto;
   }
 `;
 
@@ -99,22 +100,25 @@ const Actions = styled.div`
 
 const ActionBar = styled(Actions)`margin: 16px 8px 40px 8px;`;
 
-const DateInputContainer = styled(Actions)`
-  justify-content: start;
-  margin: 0;
+const DateInputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
 `;
 
-const CheckIn = styled.input`
+const CheckIn = styled.span`
   display: inline-block;
   background: inherit;
-  border: none;
-  text-decoration: underline solid #0f7276;
+  border-bottom: 1px solid #0f7276;
   font-family: "Circular Air", "Arial", sans-serif;
   color: #0f7276;
   font-size: 18px;
+  margin-right: 8px;
+  margin-left: 8px;
 `;
 
-const CheckOut = styled.input`
+const CheckOut = styled.span`
   background: inherit;
   border: none;
   color: #636363;
@@ -127,6 +131,7 @@ const RightArrow = styled.img`
   display: inline-block;
   width: 18px;
   height: 10px;
+  margin-right: 8px;
 `;
 
 const ImgWrapper = styled.div`display: inline-block;`;
@@ -175,42 +180,40 @@ export class Dates extends React.Component {
         )}
         {this.state.isOpen && (
           <CalendarWrapper>
-            <MediaQuery minWidth={"992px"}>
+            <MediaQuery minWidth="992px">
               <LargeCalendar>
                 <DayPickerRangeController
                   isDayBlocked={day => day.isBefore(moment(), "day")}
                   numberOfMonths={2}
-                  orientation={"horizontal"}
-                  monthFormat={"MMMM YYYY"}
+                  orientation="horizontal"
                   hideKeyboardShortcutsPanel
                 />
                 <Actions>
-                  <Cancel>Cancel</Cancel>
+                  <Cancel onClick={this.toggleOpen}>Cancel</Cancel>
                   <Apply>Apply</Apply>
                 </Actions>
               </LargeCalendar>
             </MediaQuery>
 
-            <MediaQuery minWidth={"768px"} maxWidth={"991px"}>
+            <MediaQuery minWidth="768px" maxWidth="991px">
               <MediumCalendar>
                 <DayPickerRangeController
                   isDayBlocked={day => day.isBefore(moment(), "day")}
                   numberOfMonths={1}
-                  orientation={"horizontal"}
-                  monthFormat={"MMMM YYYY"}
+                  orientation="horizontal"
                   hideKeyboardShortcutsPanel
                 />
                 <Actions>
-                  <Cancel>Cancel</Cancel>
+                  <Cancel onClick={this.toggleOpen}>Cancel</Cancel>
                   <Apply>Apply</Apply>
                 </Actions>
               </MediumCalendar>
             </MediaQuery>
 
-            <MediaQuery maxWidth={"766px"}>
+            <MediaQuery maxWidth="766px">
               <SmallCalendar>
                 <ActionBar>
-                  <CloseButton>
+                  <CloseButton onClick={this.toggleOpen}>
                     <Close src={close} />
                   </CloseButton>
                   <Title>When</Title>
@@ -218,18 +221,15 @@ export class Dates extends React.Component {
                 </ActionBar>
                 <DateInputContainer>
                   {/* <DateRangePicker /> */}
-                  <CheckIn placeholder="Check-in" />
-                  <ImgWrapper>
-                    <RightArrow src={rightarrow} />
-                  </ImgWrapper>
-                  <CheckOut placeholder="Check-out" />
+                  <CheckIn>Check-in</CheckIn>
+                  <RightArrow src={rightarrow} />
+                  <CheckOut>Check-out</CheckOut>
                 </DateInputContainer>
                 <DayPickerRangeController
                   isDayBlocked={day => day.isBefore(moment(), "day")}
-                  numberOfMonths={2}
-                  orientation={"vertical"}
-                  monthFormat={"MMMM YYYY"}
                   hideKeyboardShortcutsPanel
+                  orientation="verticalScrollable"
+                  numberOfMonths={3}
                 />
               </SmallCalendar>
             </MediaQuery>

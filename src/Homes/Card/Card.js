@@ -39,6 +39,7 @@ const Name = styled.a`
   font-family: "Circular Air", "Arial", sans-serif;
   font-weight: bold;
   display: span;
+  color: #383838;
 
   @media (min-width: 768px) {
     font-size: 15px;

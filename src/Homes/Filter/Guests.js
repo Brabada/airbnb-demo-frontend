@@ -182,7 +182,7 @@ export class Guests extends React.Component {
             </Infants>
 
             <Actions>
-              <Cancel>Cancel</Cancel>
+              <Cancel onClick={this.toggleOpen}>Cancel</Cancel>
               <Apply>Apply</Apply>
             </Actions>
           </Wrapper>
