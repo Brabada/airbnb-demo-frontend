@@ -56,8 +56,8 @@ const Search = styled.input`
   font-family: "Circular Air Book", "Arial", sans-serif;
 
   padding-left: 53px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 
   border: 0.5px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;

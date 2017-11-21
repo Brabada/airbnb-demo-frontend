@@ -54,8 +54,8 @@ const Search = styled.input`
   width: calc(100% - 60px);
 
   padding-left: 53px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 
   border: 0.5px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
@@ -78,7 +78,7 @@ const Search = styled.input`
 const Button = styled.button`
   display: none;
   color: #383838;
-  font-family: "Circular Air", "Arial", sans-serif;
+  font-family: "Circular Air Book", "Arial", sans-serif;
 
   @media (min-width: 991px) {
     display: inline-block;
