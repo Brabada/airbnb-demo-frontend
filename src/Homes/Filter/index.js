@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 //Components
-import { Button } from "./Filter/Button";
-import { Dates } from "./Filter/Date";
-import { Guests } from "./Filter/Guests";
+import { Button } from "./Button";
+import { Dates } from "./Date/index";
+import { Guests } from "./Guests/index";
 
 //styled-components
 const Filter = styled.div`

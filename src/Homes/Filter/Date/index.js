@@ -11,7 +11,7 @@ import moment from "moment";
 import MediaQuery from "react-responsive";
 import "./_datepicker.css";
 
-import { FiltButton } from "./Button";
+import { FiltButton } from "../Button";
 
 //sources
 import rightarrow from "./arrowright.svg";
