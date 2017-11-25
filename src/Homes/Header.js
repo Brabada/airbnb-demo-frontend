@@ -9,8 +9,8 @@ import arrowMenu from "./Header/arrowMenu.svg";
 import { Link } from "react-router-dom";
 
 //components
-import Filter from "./Filter/index";
 
+import Filter from "./Filter/index";
 
 //styled-component
 const Wrapper = styled.div``;
@@ -21,7 +21,9 @@ const FixedContainer = styled.div`
   z-index: 11;
 `;
 
-const OffsetContainer = styled.div`height: 133px;`;
+const OffsetContainer = styled.div`
+  height: 133px;
+`;
 
 const Header = styled.header`
   background-color: #fff;
@@ -34,7 +36,9 @@ const Header = styled.header`
 
 // const Link = styled.a``;
 
-const Logo = styled.img`height: 31px;`;
+const Logo = styled.img`
+  height: 31px;
+`;
 
 const ArrowMenu = styled.button`
   border: none;
