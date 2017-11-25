@@ -9,8 +9,8 @@ import arrowMenu from "./Header/arrowMenu.svg";
 import { Link } from "react-router-dom";
 
 //components
-// import Filter from "./Filter/index";
-import Filter from "./Filter/indexClass";
+import Filter from "./Filter/index";
+
 
 //styled-component
 const Wrapper = styled.div``;

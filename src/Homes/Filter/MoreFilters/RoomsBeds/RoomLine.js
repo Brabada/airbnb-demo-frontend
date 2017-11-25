@@ -15,18 +15,7 @@ const Wrapper = styled.div`
 
 const Type = styled.div`
   display: flex;
-  flex-direction: column;
   margin-right: 86px;
-`;
-
-const Age = styled.div`
-  if ({props.guestInfo}) {
-    display: inline-block;
-    font-size: 16px;
-    font-family: "Circular Air", "Arial", sans-serif;
-    color: #383838;
-  }
-  else: hidden;
 `;
 
 const Title = styled.div`
@@ -43,10 +32,7 @@ const Quantity = styled.div`
 `;
 
 const MinusButton = styled.button`
-  ${"" /* background-color: inherit;
-  border: 1px solid #008489;
-  border-radius: 50%;
-  color: #008489; */} background-color: inherit;
+  background-color: inherit;
   border: none;
 `;
 
@@ -73,19 +59,18 @@ const Total = styled.div`
   margin: 0 11px;
 `;
 
-export function GuestLine(props) {
+export function RoomLine(props) {
   return (
     <Wrapper>
       <Type>
-        <Title>{props.guestType}</Title>
-        <Age>{props.guestInfo}</Age>
+        <Title>{props.roomType}</Title>
       </Type>
       <Quantity>
         <MinusButton>
           <Minus src={minus} />
         </MinusButton>
         {/* <MinusButton>-</MinusButton> */}
-        <Total>0</Total>
+        <Total>0+</Total>
         <PlusButton>
           <Plus src={plus} />
         </PlusButton>
