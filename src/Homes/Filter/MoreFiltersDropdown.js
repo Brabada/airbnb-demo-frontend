@@ -4,34 +4,59 @@ import { FiltButton } from "./Button";
 import close from "./close.svg";
 
 //styled-components
+
+export const Overflow = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+`;
+
 const MoreFilterWrapper = styled.div`
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   background-color: #fff;
-  overflow-y: scroll;
+  overflow: auto;
 
-  @media (min-width: 768px) {
-    position: fixed;
-    top: 134px;
+  @media screen and (min-width: 768px) {
+    top: 136px;
   }
 
-  @media (min-width: 991px) {
-    right: 30%;
+  @media screen and (min-width: 991px) {
+    right: calc(50% - 220px);
+    left: auto;
+    background-color: #fff;
+    padding-left: 16px;
+    display: inline-block;
+    border-radius: 4px;
   }
 `;
 
 const ContentWrapper = styled.div`
-  width: 100%;
-  height: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 8px;
+  padding-left: 8px;
+
+  @media only screen and (min-width: 576px) {
+    width: 560px;
+    max-width: 100%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 752px;
+    max-width: 100%;
+  }
   @media (min-width: 991px) {
-    box-sizing: border-box;
     width: 100%;
-    height: 100%;
-    padding-left: calc(5%);
-    background-color: #fff;
+    margin: auto;
+    padding: auto;
   }
 `;
 
@@ -56,6 +81,7 @@ const Reset = styled.button`
   color: #0f7276;
   border: none;
   background-color: inherit;
+  cursor: pointer;
 `;
 
 const Cancel = styled.button`
@@ -64,7 +90,11 @@ const Cancel = styled.button`
   font-family: "Circular Air Book", "Arial", sans-serif;
   color: #383838;
   font-size: 18px;
+
+  padding: 0;
   margin-right: 16px;
+
+  cursor: pointer;
 `;
 
 const Apply = styled.a`
@@ -115,11 +145,13 @@ const ActionBar = styled.div`
 const CloseButton = styled.button`
   border: none;
   background-color: inherit;
+  cursor: pointer;
 `;
 
-const MobileFooter = styled.footer`
+const Footer = styled.footer`
   display: block;
   border-top: 1px solid rgba(72, 72, 72, 0.2);
+  padding: 0 8px;
 
   right: 0;
   bottom: 0;
@@ -167,9 +199,10 @@ export function MoreFiltersDropdown(props) {
       )}
 
       {props.isOpen && (
-        <MoreFilterWrapper>
-          <ContentWrapper>
-            <div className="container">
+        <div>
+          <Overflow />
+          <MoreFilterWrapper>
+            <ContentWrapper>
               <ActionBar>
                 <CloseButton onClick={openFilter}>
                   <Close src={close} />
@@ -185,14 +218,12 @@ export function MoreFiltersDropdown(props) {
                 <Apply>See homes</Apply>
               </Actions>
 
-              <MobileFooter>
-                <div className="container">
-                  <SeeHomes>See homes</SeeHomes>
-                </div>
-              </MobileFooter>
-            </div>
-          </ContentWrapper>
-        </MoreFilterWrapper>
+              <Footer>
+                <SeeHomes>See homes</SeeHomes>
+              </Footer>
+            </ContentWrapper>
+          </MoreFilterWrapper>
+        </div>
       )}
     </div>
   );

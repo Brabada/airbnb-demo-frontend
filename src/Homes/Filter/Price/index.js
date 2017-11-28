@@ -1,13 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import MediaQuery from "react-responsive";
 
 import "./slider.css";
 import Rheostat from "rheostat";
 
+//sources
+import gistogram from "./gistogram.svg";
+
 //styled-components
 const Wrapper = styled.div`
-  margin: 24px 16px 38px 16px;
+  display: none;
+  @media (min-width: 991px) {
+    display: block;
+    margin: 24px 16px 56px 16px;
+    width: 294px;
+  }
 `;
 
 const Range = styled.div`
@@ -25,11 +32,17 @@ const AveragePrice = styled.div`
 `;
 
 const Graph = styled.div`
-  width: 292px;
-  height: 120px;
-  ${"" /* margin: 10% auto;
-  height: 50%;
-  width: 50%; */} box-sizing: border-box;
+  position: relative;
+  padding: 0px 16px;
+  padding-top: 80px;
+`;
+
+const Gistogram = styled.img`
+  position: absolute;
+  width: 144px;
+  height: auto;
+  top: 12px;
+  left: 25px;
 `;
 
 export default class Price extends React.Component {
@@ -43,40 +56,21 @@ export default class Price extends React.Component {
     });
   };
 
-  PitComponent = (style, children) => {
-    return (
-      <div
-        style={{
-          ...style,
-          background: "#a2a2a2",
-          width: 6,
-          height: children % 10 === 0 ? 12 : 8,
-          top: 10
-        }}
-      />
-    );
-  };
-
   render() {
     return (
-      <div>
-        <MediaQuery minWidth="992px">
-          <Wrapper>
-            <Range>$10 — $1000+</Range>
-            <AveragePrice>The average nightly price is $75.</AveragePrice>
-            <Graph>
-              <Rheostat
-                onValuesUpdated={this.updateValue}
-                // pitComponent={this.PitComponent}
-                // pitPoints={[0, 55]}
-                min={1}
-                max={100}
-                values={[0, 100]}
-              />
-            </Graph>
-          </Wrapper>
-        </MediaQuery>
-      </div>
+      <Wrapper>
+        <Range>$10 — $1000+</Range>
+        <AveragePrice>The average nightly price is $75.</AveragePrice>
+        <Graph>
+          <Gistogram src={gistogram} />
+          <Rheostat
+            onValuesUpdated={this.updateValue}
+            min={1}
+            max={100}
+            values={[0, 100]}
+          />
+        </Graph>
+      </Wrapper>
     );
   }
 }

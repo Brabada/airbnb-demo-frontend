@@ -4,10 +4,15 @@ import styled from "styled-components";
 import "./slider.css";
 import Rheostat from "rheostat";
 
+//sources
+import gistogram from "./gistogram.svg";
+
 //styled-components
 const Wrapper = styled.div`
   display: block;
   border-bottom: 0.5px solid rgba(72, 72, 72, 0.3);
+  width: 100%;
+  margin-top: 32px;
 
   @media (min-width: 991px) {
     display: none;
@@ -29,9 +34,27 @@ const AveragePrice = styled.div`
 `;
 
 const Graph = styled.div`
-  width: 100%;
-  height: 120px;
-  box-sizing: border-box;
+  position: relative;
+  padding: 64px 16px 32px;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+`;
+
+const Gistogram = styled.img`
+  position: absolute;
+  width: 144px;
+  height: auto;
+  top: calc(50% - 50px);
+  left: 25px;
+
+  @media (min-width: 768px) {
+    width: 384px;
+    height: 79px;
+  }
 `;
 
 const Title = styled.h3`
@@ -41,6 +64,7 @@ const Title = styled.h3`
   padding: 0;
   margin: 0;
   margin-bottom: 24px;
+
   @media (min-width: 768px) {
     font-size: 20px;
   }
@@ -57,20 +81,6 @@ export default class Price extends React.Component {
     });
   };
 
-  PitComponent = (style, children) => {
-    return (
-      <div
-        style={{
-          ...style,
-          background: "#a2a2a2",
-          width: 6,
-          height: children % 10 === 0 ? 12 : 8,
-          top: 10
-        }}
-      />
-    );
-  };
-
   render() {
     return (
       <Wrapper>
@@ -78,14 +88,8 @@ export default class Price extends React.Component {
         <Range>$10 — $1000+</Range>
         <AveragePrice>The average nightly price is $75.</AveragePrice>
         <Graph>
-          <Rheostat
-            onValuesUpdated={this.updateValue}
-            // pitComponent={this.PitComponent}
-            // pitPoints={[0, 55]}
-            min={1}
-            max={100}
-            values={[0, 100]}
-          />
+          <Gistogram src={gistogram} />
+          <Rheostat min={1} max={100} values={[0, 100]} />
         </Graph>
       </Wrapper>
     );

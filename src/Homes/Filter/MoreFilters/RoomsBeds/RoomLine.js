@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: ${props => (props.last ? "32px" : "24px")};
 `;
 
 const Type = styled.div`
@@ -20,10 +20,13 @@ const Type = styled.div`
 
 const Title = styled.div`
   display: inline-block;
-  font-size: 20px;
-  font-family: "Circular Air Book", "Arial", sans-serif;
+  font-size: 16px;
+  font-family: "Circular Air", "Arial", sans-serif;
   color: #383838;
-  margin-bottom: 7px;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const Quantity = styled.div`
@@ -32,31 +35,38 @@ const Quantity = styled.div`
 `;
 
 const MinusButton = styled.button`
-  background-color: inherit;
   border: none;
+  cursor: pointer;
+
+  background-color: transparent;
+  background-image: url(${minus});
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 5px;
+
+  width: 32px;
+  height: 32px;
 `;
 
 const PlusButton = styled.button`
-  background-color: inherit;
   border: none;
-  padding-right: 0;
-`;
+  cursor: pointer;
 
-const Minus = styled.img`
-  height: 32px;
-  width: 32px;
-`;
+  background-color: transparent;
+  background-image: url(${plus});
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 5px;
 
-const Plus = styled.img`
-  height: 32px;
   width: 32px;
+  height: 32px;
 `;
 
 const Total = styled.div`
   display: inline-block;
   font-size: 18px;
   font-family: "Circular Air", "Arial", sans-serif;
-  margin: 0 11px;
+  margin: 0 16px;
 `;
 
 export function RoomLine(props) {
@@ -66,14 +76,9 @@ export function RoomLine(props) {
         <Title>{props.roomType}</Title>
       </Type>
       <Quantity>
-        <MinusButton>
-          <Minus src={minus} />
-        </MinusButton>
-        {/* <MinusButton>-</MinusButton> */}
+        <MinusButton />
         <Total>0+</Total>
-        <PlusButton>
-          <Plus src={plus} />
-        </PlusButton>
+        <PlusButton />
       </Quantity>
     </Wrapper>
   );

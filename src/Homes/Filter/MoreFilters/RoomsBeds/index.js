@@ -8,10 +8,16 @@ import { RoomLine } from "./RoomLine";
 const Wrapper = styled.section`
   margin-top: 32px;
   border-bottom: 0.5px solid rgba(72, 72, 72, 0.3);
+  padding-bottom: 8px;
   margin-bottom: 24px;
+
   @media (min-width: 768px) {
+    margin-top: 24px;
+    padding-right: 200px;
+  }
+
+  @media (min-width: 991px) {
     margin-top: 48px;
-    padding-right: 294px;
   }
 `;
 
@@ -35,7 +41,7 @@ export default function RoomsBeds() {
       <Rooms>
         <RoomLine roomType="Bedrooms" />
         <RoomLine roomType="Beds" />
-        <RoomLine roomType="Bathrooms" />
+        <RoomLine last roomType="Bathrooms" />
       </Rooms>
     </Wrapper>
   );

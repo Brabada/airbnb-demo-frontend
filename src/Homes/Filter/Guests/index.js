@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MediaQuery from "react-responsive";
 
 //components
-import { GuestLine } from "./GuestLine";
+import GuestLine from "./GuestLine";
 
 //styled-components
 
@@ -26,6 +26,7 @@ const Footer = styled.footer`
   right: 0;
   bottom: 0;
   left: 0;
+  padding: 0 8px;
 `;
 
 const SaveButton = styled.button`
@@ -45,9 +46,11 @@ const SaveButton = styled.button`
   padding-top: 16px;
   padding-bottom: 16px;
   margin: 8px 0;
+
+  cursor: pointer;
 `;
 
-export function Guests() {
+export default function Guests() {
   return (
     <div>
       <MediaQuery minWidth="768px">
@@ -67,9 +70,7 @@ export function Guests() {
           </GuestSection>
         </div>
         <Footer>
-          <div className="container">
-            <SaveButton>Save</SaveButton>
-          </div>
+          <SaveButton>Save</SaveButton>
         </Footer>
       </MediaQuery>
     </div>

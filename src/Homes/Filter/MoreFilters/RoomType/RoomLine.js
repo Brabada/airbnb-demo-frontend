@@ -24,6 +24,8 @@ const Type = styled.div`
   flex-direction: column;
   margin-right: 32px;
   width: auto;
+  cursor: pointer;
+
   @media (min-width: 768px) {
     width: 196px;
   }
@@ -59,11 +61,13 @@ const Checkbox = styled.button`
   padding-left: 0;
   padding-right: 0;
   margin-right: 8px;
+  cursor: pointer;
 `;
 
 const CheckboxImg = styled.img`
   height: 24px;
   width: 24px;
+  display: block;
 `;
 
 export default class RoomLine extends React.Component {
@@ -82,8 +86,8 @@ export default class RoomLine extends React.Component {
   render() {
     return (
       <Wrapper>
-        <CheckboxWrapper>
-          <Checkbox onClick={this.changeCheck}>
+        <CheckboxWrapper onClick={this.changeCheck}>
+          <Checkbox>
             {this.state.isChecked ? (
               <CheckboxImg src={checkboxChecked} />
             ) : (
@@ -92,8 +96,8 @@ export default class RoomLine extends React.Component {
           </Checkbox>
 
           <Type>
-            <Title>{this.props.roomType}</Title>
-            <TypeInfo>{this.props.roomInfo}</TypeInfo>
+            <Title>{this.props.Type}</Title>
+            <TypeInfo>{this.props.Info}</TypeInfo>
           </Type>
         </CheckboxWrapper>
         <RoomPicture src={this.props.img} />

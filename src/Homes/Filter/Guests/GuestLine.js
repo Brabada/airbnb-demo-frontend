@@ -20,13 +20,10 @@ const Type = styled.div`
 `;
 
 const Age = styled.div`
-  if ({props.guestInfo}) {
-    display: inline-block;
-    font-size: 16px;
-    font-family: "Circular Air", "Arial", sans-serif;
-    color: #383838;
-  }
-  else: hidden;
+  display: ${props => (props.guestInfo ? "inline-block" : "none")};
+  font-size: 16px;
+  font-family: "Circular Air", "Arial", sans-serif;
+  color: #383838;
 `;
 
 const Title = styled.div`
@@ -43,27 +40,31 @@ const Quantity = styled.div`
 `;
 
 const MinusButton = styled.button`
-  ${"" /* background-color: inherit;
-  border: 1px solid #008489;
-  border-radius: 50%;
-  color: #008489; */} background-color: inherit;
   border: none;
+  cursor: pointer;
+
+  background-color: transparent;
+  background-image: url(${minus});
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 5px;
+
+  width: 32px;
+  height: 32px;
 `;
 
 const PlusButton = styled.button`
-  background-color: inherit;
   border: none;
-  padding-right: 0;
-`;
+  cursor: pointer;
 
-const Minus = styled.img`
-  height: 32px;
-  width: 32px;
-`;
+  background-color: transparent;
+  background-image: url(${plus});
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 5px;
 
-const Plus = styled.img`
-  height: 32px;
   width: 32px;
+  height: 32px;
 `;
 
 const Total = styled.div`
@@ -73,22 +74,17 @@ const Total = styled.div`
   margin: 0 11px;
 `;
 
-export function GuestLine(props) {
+export default function Guest(props) {
   return (
     <Wrapper>
       <Type>
         <Title>{props.guestType}</Title>
-        <Age>{props.guestInfo}</Age>
+        <Age guestInfo={props.guestInfo}>{props.guestInfo}</Age>
       </Type>
       <Quantity>
-        <MinusButton>
-          <Minus src={minus} />
-        </MinusButton>
-        {/* <MinusButton>-</MinusButton> */}
+        <MinusButton />
         <Total>0</Total>
-        <PlusButton>
-          <Plus src={plus} />
-        </PlusButton>
+        <PlusButton />
       </Quantity>
     </Wrapper>
   );

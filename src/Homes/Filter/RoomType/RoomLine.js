@@ -24,6 +24,7 @@ const Type = styled.div`
   flex-direction: column;
   margin-right: 32px;
   width: 196px;
+  cursor: pointer;
 `;
 
 const TypeInfo = styled.div`
@@ -48,16 +49,18 @@ const RoomPicture = styled.img`
 `;
 
 const Checkbox = styled.button`
+  display: inline-block;
   border: none;
   background-color: inherit;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
   margin-right: 8px;
+  cursor: pointer;
 `;
 
 const CheckboxImg = styled.img`
   height: 24px;
   width: 24px;
+  display: block;
 `;
 
 export default class RoomLine extends React.Component {
@@ -76,8 +79,8 @@ export default class RoomLine extends React.Component {
   render() {
     return (
       <Wrapper>
-        <CheckboxWrapper>
-          <Checkbox onClick={this.changeCheck}>
+        <CheckboxWrapper onClick={this.changeCheck}>
+          <Checkbox>
             {this.state.isChecked ? (
               <CheckboxImg src={checkboxChecked} />
             ) : (

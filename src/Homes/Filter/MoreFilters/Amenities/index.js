@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import CheckPoint from "./CheckPoint/index";
+import CheckPoint from "./Checkpoint";
 
 //sources
 import arrowDown from "./arrowDown.svg";
@@ -12,8 +12,10 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @media (min-width: 768px) {
     display: block;
+    padding-bottom: 32px;
   }
 `;
 
@@ -38,19 +40,19 @@ const CheckSection = styled.section`
 `;
 
 const SeeAll = styled.button`
-  display: ${props => (props.mobile ? "inline-block" : "none")};
+  display: ${props => (props.showXs ? "inline-block" : "none")};
   border: none;
   background-color: inherit;
   font-family: "Circular Air Book", "Arial", sans-serif;
   font-size: 16px;
   color: #0f7276;
   padding: 0;
+  cursor: pointer;
   margin: 32px 0;
 
   @media (min-width: 768px) {
-    display: ${props => (props.mobile ? "none" : "block")};
+    display: ${props => (props.showXs ? "none" : "block")};
     margin: 0;
-    padding-bottom: 32px;
   }
 `;
 
@@ -63,7 +65,7 @@ export default function Amenities() {
   return (
     <Wrapper>
       <Title>Amenities</Title>
-      <SeeAll mobile>
+      <SeeAll showXs>
         See all <ArrowDown src={arrowDown} />
       </SeeAll>
       <CheckSection>

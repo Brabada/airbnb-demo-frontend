@@ -4,7 +4,7 @@ import styled from "styled-components";
 //Components
 import { Button } from "./Button";
 import { Dates } from "./Date/index";
-import { Guests } from "./Guests/index";
+import Guests from "./Guests/index";
 import { RoomType } from "./RoomType/index";
 import Price from "./Price/index";
 import Dropdown from "./Dropdown";

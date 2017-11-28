@@ -42,18 +42,18 @@ export function RoomType() {
       <Title>Room Type</Title>
       <RoomSection>
         <RoomLine
-          roomType="Entire Home"
-          roomInfo="Have a place to yourself"
+          Type="Entire Home"
+          Info="Have a place to yourself"
           img={entire}
         />
         <RoomLine
-          roomType="Private room"
-          roomInfo="Have your own room and share some common spaces"
+          Type="Private room"
+          Info="Have your own room and share some common spaces"
           img={privateRoom}
         />
         <RoomLine
-          roomType="Shared room"
-          roomInfo="Stay in a shared space, like a common room"
+          Type="Shared room"
+          Info="Stay in a shared space, like a common room"
           img={shared}
         />
       </RoomSection>

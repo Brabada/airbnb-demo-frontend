@@ -17,11 +17,13 @@ const Checkbox = styled.button`
   background-color: inherit;
   padding: 0;
   margin-right: 16px;
+  cursor: pointer;
 `;
 
 const CheckboxImg = styled.img`
   height: 24px;
   width: 24px;
+  display: block;
 `;
 
 const Title = styled.div`
@@ -29,6 +31,7 @@ const Title = styled.div`
   font-family: "Circular Air", "Arial", sans-serif;
   font-size: 18px;
   color: #383838;
+  cursor: pointer;
 `;
 
 export default class RoomLine extends React.Component {
@@ -47,8 +50,8 @@ export default class RoomLine extends React.Component {
   render() {
     return (
       <div className="xs-hidden col-md-6">
-        <CheckboxWrapper>
-          <Checkbox onClick={this.changeCheck}>
+        <CheckboxWrapper onClick={this.changeCheck}>
+          <Checkbox>
             {this.state.isChecked ? (
               <CheckboxImg src={checkboxChecked} />
             ) : (

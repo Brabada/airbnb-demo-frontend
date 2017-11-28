@@ -40,13 +40,18 @@ const TypeInfo = styled.div`
 const SliderButton = styled.button`
   border: none;
   background-color: inherit;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
+  cursor: pointer;
+  ${"" /* background-color: transparent;
+  backgound-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(${props =>}) */};
 `;
 
 const SliderImg = styled.img`
   height: 40px;
   width: 64px;
+  display: block;
 `;
 
 export default class InstantBook extends React.Component {

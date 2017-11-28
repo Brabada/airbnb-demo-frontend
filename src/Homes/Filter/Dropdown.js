@@ -34,6 +34,7 @@ const Button = styled(FiltButton)`
   background-color: ${props => (props.isOpen ? "#008489" : "#fff")};
   color: ${props => (props.isOpen ? "#fff" : "#383838")};
   display: ${props => (props.showLg ? "none" : "block")};
+  cursor: pointer;
 
   @media screen and (min-width: 991px) {
     display: flex;
@@ -57,6 +58,7 @@ const ActionBar = styled(Actions)`
 const CloseButton = styled.button`
   border: none;
   background-color: inherit;
+  cursor: pointer;
 `;
 
 const Close = styled.img`
@@ -77,6 +79,7 @@ const Reset = styled.button`
   color: #0f7276;
   border: none;
   background-color: inherit;
+  cursor: pointer;
 `;
 
 const Cancel = styled.button`
@@ -85,6 +88,7 @@ const Cancel = styled.button`
   font-family: "Circular Air Book", "Arial", sans-serif;
   color: #636363;
   font-size: 16px;
+  cursor: pointer;
 `;
 
 const Apply = styled(Cancel)`
